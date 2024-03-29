@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="x-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>personal site</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/6ec0377a49.js" crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="iLOG" class="logo">
+                    <ul>
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#">ABOUT</a></li>
+                        <li><a href="#">SERVICES</a></li>
+                        <li><a href="#">CONTACT</a></li>
+                    </ul>
+                    
+                </nav>
+                <div class="header-text">
+                    <p>UI/UX Designer</p>
+                    <h1>Hi,I'm <span>IAN </span><br> Jen From Australia</h1>
+                </div>
+
+            </div>
+        </div>
+        
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="ian.jpg.jpg" alt="">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>i do web development , design web/app interfances,build android/ios apps
+                        </p>
+                        <div class="tab-title">
+                            <p class="tab-links" onclick="opentab('skills')">skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>UI/UX</span><br>Designing Web/App interfances</li>
+                                <li><span>Web Development</span><br>web app Development</li>
+                                <li><span>App Development</span><br>Building Android/iOS apps</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>2021 - current</span><br>UI/UX Designing Training at Et Institute.</li>
+                                <li><span>2019 - 2021</span><br>Teaam lead at starApp LLC.</li>
+                                <li><span>2017 - 2019</span><br>UI/UX Design Executive at coin Digital Ltd.</li>
+                                <li><span>2016 - 2017</span><br> Internship at ekart eCommerce.</li>
+
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2016</span><br>UI/UX Designing Training at Et Institute.</li>
+                                <li><span>2016</span><br>MBA from MIT Bangalore.</li>
+                                <li><span>2016</span><br>BBA from ISM Bangalore.</li>
+                                
+
+
+                            </ul>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        
+        <div id="services">
+            <div class="container">
+                <h1 class="sub-title">My Services</h1>
+                <div class="services-list">
+                    <div>
+                        <i class="fa-solid fa-code"></i>
+                        <h2>Web Design</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua.</p>
+                        <a href="#">Learn more</a>
+
+                    </div>
+                    <div>
+                        <i class="fa-duotone fa-crop"></i>
+                        <h2>UI/UX Design</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua.</p>
+                        <a href="#">Learn more</a>
+                    </div>
+                    <div>
+                        <i class="fa-brands fa-app-store-ios"></i>
+                        <h2>App Design</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua.</p>
+                        <a href="#">Learn more</a>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        
+        <div id="portfolio">
+            <div class="container">
+                <h1 class="sub-title">My Work</h1>
+                <div class="work-list">
+                    <div class="work">
+                        <img scr="APP2.jpg" alt="">
+                        <div class="layer">
+                            <h3>Social Media App</h3>
+                            <p>The app connects you to the talented people around the World.
+                            Download it from play store</p>
+                            <a href="#"></a>
+
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="APP.jpg" alt="">
+                        <div class="layer">
+                            <h3>Music App</h3>
+                            <p>The app connects you to the talented people around the World.
+                            Download it from play store</p>
+                            <a href="#"></a>
+
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img scr="APP3.jpg" alt="">
+                        
+                        <div class="layer">
+                            
+                            <h3>Online Shopping App</h3>
+                            <p>The application connects you to the talented people around the World.
+                            Download it from play stor</p>
+                            <a href="#"></a>
+
+                        </div>
+                    </div>
+
+                </div>
+                <a href="#" class="btn">See more</a>
+
+            </div>
+
+        </div>
+        
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+            
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-link");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+
+
+            }
+
+
+        </script>
+
+
+    </body>
+</html>
